@@ -1,0 +1,157 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* VARIABLES */
+:root
+{
+    /* COLORS */
+    --firstColor: #F2A20C;
+    --whiteColor: #E9EAEC;
+    --darkColor: #272D40;
+    --darkColorLighten: #F2F5FF;
+
+    /* FONT AND TYPOGRAPHY */
+    --bodyFont: 'Poppins', sans-serif;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --normalFontSize: 1rem;
+    --smallFontSize: 0.875rem;
+}
+
+/* BASE */
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: var(--bodyFont);
+    font-size: var(--normalFontSize);
+}
+
+h1, p
+{
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* CARD */
+.container
+{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkColorLighten);
+}
+
+.card
+{
+    width: 320px;
+    height: 400px;
+    background-color: var(--darkColor);
+    padding: 4rem 2rem 0rem;
+    border-radius: 1rem;
+    color: var(--whiteColor);
+    overflow-y: hidden;
+}
+
+.card_img
+{
+    position: absolute;
+    width: 260px;
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4))
+}
+
+.card_data
+{
+    transform: translateY(13.2rem);
+    text-align: center;
+}
+
+.card_title
+{
+    font-size: var(--h1FontSize);
+    color: var(--firstColor);
+    margin-bottom: 0.5rem;
+}
+
+.card_price
+{
+    display: inline-block;
+    font-size: var(--h2FontSize);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.card_desc
+{
+    font-size: var(--smallFontSize);
+    text-align: initial;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+}
+
+.card_button
+{
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: var(--firstColor);
+    color: var(--whiteColor);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.card_button:hover
+{
+    box-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35)
+}
+
+.card_img, .card_data, .card_title, .card_price, .card_desc
+{
+    transition: 0.5s;
+}
+
+/* HOVER CARD EFFECT */
+.card:hover .card_img   /* Hovers the ".card_img" element(s) within the ".card" element*/
+{
+    transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+}
+
+.card:hover .card_data
+{
+    transform: translateY(4.8rem);
+}
+
+.card:hover .card_title
+{
+    transform: translateX(-2.3rem);
+    margin-bottom: 0;
+}
+
+.card:hover .card_price
+{
+    transform: translateX(-6.8rem);
+}
+
+.card:hover .card_desc, .card:hover .card_button
+{
+    transition-delay: 0.2s;
+    opacity: 1;
+}
