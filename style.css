@@ -51,7 +51,7 @@ img
 /* CARD */
 .container
 {
-    height:100vh;
+    height:90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,4 +154,9 @@ img
 {
     transition-delay: 0.2s;
     opacity: 1;
+}
+
+.link
+{
+    text-align: center;
 }
